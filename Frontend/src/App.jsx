@@ -3,6 +3,7 @@ import './App.css'
 import Navbar from './Components/Navbar'
 import Header from './Components/Header'
 import ProjectC from './Components/ProjectC'
+import MainSection from './Components/MainSection'
 
 function App() {
    const [content,setContent] = useState('home')
@@ -11,9 +12,11 @@ function App() {
     <div className='h-screen bg-[#00395a] text-[#d6ccce]flex flex-col '>
         <Header />
         <Navbar />
-        <div>
+        <MainSection />
+        
           <ProjectC />
-        </div>
+        
+
     </div>
   )
 }
