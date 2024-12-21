@@ -1,11 +1,14 @@
-
 import React from "react";
 
 function ProjectCard({ projectImg, ProfileImg, ProfileName, date, children }) {
   return (
-    <div className="group flex flex-col gap-2 p-2 rounded-md h-[300px] w-[300px] bg-white shadow-md transition-all duration-300 overflow-hidden hover:h-[400px]">
+    <div className="group flex flex-col gap-2 p-2 rounded-md h-[300px] w-[300px] bg-white shadow-md transition-transform duration-300 transform hover:scale-y-105 origin-top">
       {/* Project Image */}
-      <img src={projectImg} alt="Project" className="rounded-md h-[200px] w-full object-cover" />
+      <img
+        src={projectImg}
+        alt="Project"
+        className="rounded-md h-[200px] w-full object-cover"
+      />
 
       {/* Profile Section */}
       <div className="flex items-center gap-2">
@@ -21,8 +24,8 @@ function ProjectCard({ projectImg, ProfileImg, ProfileName, date, children }) {
       </div>
 
       {/* Description Section */}
-      <div className="relative overflow-hidden transition-[max-height] duration-300 ease-in-out max-h-0 group-hover:max-h-40">
-        <p className="text-sm text-gray-700 mt-2">{children}</p>
+      <div className="relative overflow-hidden transition-[max-height] duration-300 ease-in-out max-h-0 group-hover:max-h-40 px-2">
+        <p className="text-md text-gray-700 mt-2">{children}</p>
       </div>
     </div>
   );
