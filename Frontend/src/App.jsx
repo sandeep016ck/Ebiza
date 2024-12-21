@@ -9,11 +9,10 @@ function App() {
    const [content,setContent] = useState('home')
 
   return (
-    <div className='h-screen bg-[#00395a] text-[#d6ccce]flex flex-col '>
+    <div className='bg-[#00395a] text-[#d6ccce]flex flex-col '>
         <Header />
         <Navbar />
         <MainSection />
-        
           <ProjectC />
         
 

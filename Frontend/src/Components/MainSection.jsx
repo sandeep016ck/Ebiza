@@ -8,8 +8,8 @@ const LearnMoreComponent = () => {
     return (
         (showMore) ?
             <MainSection /> :
-            <section className="p-8 bg-gradient-to-r from-blue-700 to-blue-900 text-white text-center">
-                <div className="p-8 bg-gradient-to-r from-blue-700 to-blue-900 text-white text-center">
+            <section className="h-[79vh] p-8 bg-gradient-to-r from-blue-900 to-blue-950 text-white text-center">
+                <div className="p-8 bg-gradient-to-r from-blue-900 to-blue-950 text-white text-center">
                     <h2 className="text-3xl md:text-4xl font-bold mb-4">Welcome to EbizA!</h2>
                     <p className="text-lg leading-relaxed mb-6">
                         EbizA connects communities, businesses, and investors to improve accessibility and foster impactful projects. Together, we can create a more inclusive world.
@@ -33,7 +33,7 @@ const MainSection = () => {
         showLearnMore ? (
             <LearnMoreComponent />
         ) : (
-            <section className="flex flex-col md:flex-row items-center justify-between p-8 bg-gradient-to-r from-blue-500 to-blue-700 text-white">
+            <section className="h-[79vh] flex flex-col md:flex-row items-center justify-between p-8 bg-gradient-to-r from-blue-900 to-blue-950 text-white">
                 {/* Image Section */}
                 <div className="w-full md:w-1/2 flex justify-center md:justify-start mb-8 md:mb-0">
                     <img
