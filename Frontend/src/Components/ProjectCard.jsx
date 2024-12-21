@@ -1,8 +1,11 @@
-import React from "react";
+import React, { useState } from "react";
+import { use } from "react";
 
 function ProjectCard({ projectImg, ProfileImg, ProfileName, date, children }) {
+
+  
   return (
-    <div className="group flex flex-col gap-2 p-2 rounded-md h-[300px] w-[300px] bg-white shadow-md transition-transform duration-300 transform hover:scale-y-105 origin-top">
+    <div className="group flex flex-col gap-2 p-2 rounded-md h-[230px] w-[300px]  bg-white shadow-md transition-transform duration-300 transform hover:scale-y-105 origin-top overflow-hidden hover:overflow-visible transition-all ease-in-out hover:relative hover:z-40  " >
       {/* Project Image */}
       <img
         src={projectImg}
@@ -11,24 +14,35 @@ function ProjectCard({ projectImg, ProfileImg, ProfileName, date, children }) {
       />
 
       {/* Profile Section */}
-      <div className="flex items-center gap-2">
-        <img
-          src={ProfileImg}
-          alt="Profile"
-          className="h-14 w-14 rounded-full object-cover"
-        />
-        <div>
-          <span className="text-sm font-medium">{ProfileName}</span>
-          <span className="block text-xs text-gray-500">Created on {date}</span>
+      <div className="flex flex-col items-center gap-2  w-full">
+
+        <div className="flex flex-row items-center gap-2">
+          <img
+            src={ProfileImg}
+            alt="Profile"
+            className="h-14 w-14 rounded-full object-cover"
+          />
+          <div>
+            <span className="text-sm font-medium">{ProfileName}</span>
+            <span className="block text-xs text-gray-500">Created on {date}</span>
+
+          </div>
         </div>
+
+        <div className=" felx flex-row justify-center items-center bg-white px-3 w-[300px] 
+         rounded-b-lg">
+          <p className="text-md text-gray-700 mt-2  w-full">{children}</p>
+        </div>
+
+
+
       </div>
 
       {/* Description Section */}
-      <div className="relative overflow-hidden transition-[max-height] duration-300 ease-in-out max-h-0 group-hover:max-h-40 px-2">
-        <p className="text-md text-gray-700 mt-2">{children}</p>
-      </div>
-      <p>sujit </p>
-      <p>sam</p>
+      {/* <div className=" w-full relative overflow-hidden  transition-[max-height] duration-300 ease-in-out max-h-0 group-hover:max-h-40  hover:bg-[#FFFFFF] relative">
+        <p className="text-md text-gray-700 mt-2  w-full">{children}</p>
+      </div> */}
+
     </div>
 
   );
