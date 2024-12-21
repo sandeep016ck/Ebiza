@@ -5,7 +5,7 @@ function ProjectCard({ projectImg, ProfileImg, ProfileName, date, children }) {
 
   
   return (
-    <div className="group flex flex-col gap-2 p-2 rounded-md h-[228px] w-[300px]  bg-white  transition-transform duration-300 transform hover:scale-y-105 origin-top overflow-hidden hover:overflow-visible transition-all ease-in-out hover:relative hover:z-40 hover:cursor-pointer " >
+    <div className="group flex flex-col gap-2 p-2 rounded-md h-[228px] w-[300px]  bg-white  transition-transform duration-300 transform hover:scale-y-105 origin-top overflow-hidden hover:overflow-visible transition-all ease-in-out hover:relative hover:z-10 hover:cursor-pointer " >
       {/* Project Image */}
       <img
         src={projectImg}
