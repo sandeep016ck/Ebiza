@@ -33,7 +33,7 @@ const MainSection = () => {
         showLearnMore ? (
             <LearnMoreComponent />
         ) : (
-            <section className="h-[79vh] flex flex-col md:flex-row items-center justify-between p-8 bg-gradient-to-r from-blue-900 to-blue-950 text-white">
+            <section className="h-[100vh] flex flex-col md:flex-row items-center justify-between p-8 bg-gradient-to-r from-blue-900 to-blue-950 text-white">
                 {/* Image Section */}
                 <div className="w-full md:w-1/2 flex justify-center md:justify-start mb-8 md:mb-0">
                     <img

@@ -20,14 +20,14 @@ const Navbar = () => {
     }, []);
 
   return (
-    <nav className='flex justify-evenly items-center p-4 transition-all duration-300 bg-[#00395a] text-[#d6ccce]'>
+    <nav className='flex justify-evenly items-center p-4 transition-all duration-300 bg-[#00395a] text-white'>
       
       {/* Navigation Links */}
       <div className="flex space-x-6 gap-4 ">
-        <a href="#home" className="hover:text-gray-200 transition text-xl font-bold">Home</a>
-        <a href="#projects" className="hover:text-gray-200 transition text-xl font-bold">Projects</a>
-        <a href="#your-projects" className="hover:text-gray-200 transition text-xl font-bold">Your Projects</a>
-        <a href="#investment-history" className="hover:text-gray-200 transition text-xl font-bold">Investment History</a>
+        <a href="#home" className="hover:text-[#7193f1] transition ease-in text-xl font-bold">Home</a>
+        <a href="#projects" className="hover:text-[#7193f1]   transition text-xl font-bold">Projects</a>
+        <a href="#your-projects" className="hover:text-[#7193f1]  transition text-xl font-bold">Your Projects</a>
+        <a href="#investment-history" className="hover:text-[#7193f1]  transition text-xl font-bold">Investment History</a>
       </div>
 
       {/* Dynamic Search Bar */}

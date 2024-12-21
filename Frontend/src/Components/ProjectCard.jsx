@@ -5,7 +5,7 @@ function ProjectCard({ projectImg, ProfileImg, ProfileName, date, children }) {
 
   
   return (
-    <div className="group flex flex-col gap-2 p-2 rounded-md h-[230px] w-[300px]  bg-white shadow-md transition-transform duration-300 transform hover:scale-y-105 origin-top overflow-hidden hover:overflow-visible transition-all ease-in-out hover:relative hover:z-40  " >
+    <div className="group flex flex-col gap-2 p-2 rounded-md h-[228px] w-[300px]  bg-white  transition-transform duration-300 transform hover:scale-y-105 origin-top overflow-hidden hover:overflow-visible transition-all ease-in-out hover:relative hover:z-40  " >
       {/* Project Image */}
       <img
         src={projectImg}
@@ -16,11 +16,11 @@ function ProjectCard({ projectImg, ProfileImg, ProfileName, date, children }) {
       {/* Profile Section */}
       <div className="flex flex-col items-center gap-2  w-full">
 
-        <div className="flex flex-row items-center gap-2">
+        <div className="flex flex-row justify-start  w-full gap-2">
           <img
             src={ProfileImg}
             alt="Profile"
-            className="h-14 w-14 rounded-full object-cover"
+            className="h-12 w-12 rounded-full object-cover"
           />
           <div>
             <span className="text-sm font-medium">{ProfileName}</span>

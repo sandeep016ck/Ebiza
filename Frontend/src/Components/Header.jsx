@@ -4,7 +4,7 @@ import StyleButton from "./Buttons/styleButton";
 
 const Header = () => {
   return (
-    <nav className="flex justify-between items-center p-4  text-[#d6ccce]">
+    <nav className="flex justify-between items-center p-4  text-white">
       {/* Logo */}
       <div className="text-2xl font-bold">Logo</div>
 
