@@ -28,8 +28,9 @@ function ProjectCard({ projectImg, ProfileImg, ProfileName, date, children }) {
         <p className="text-md text-gray-700 mt-2">{children}</p>
       </div>
       <p>sujit </p>
+      <p>sam</p>
     </div>
-    
+
   );
 }
 
