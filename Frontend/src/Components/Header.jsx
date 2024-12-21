@@ -4,7 +4,7 @@ import StyleButton from "./Buttons/styleButton";
 
 const Header = () => {
   return (
-    <nav className="flex justify-between items-center p-4  text-white">
+    <nav className="flex justify-between items-center p-4  text-white sticky top-0 z-20">
       {/* Logo */}
       <div className="text-2xl font-bold">Logo</div>
 
@@ -18,3 +18,5 @@ const Header = () => {
 };
 
 export default Header;
+
+
