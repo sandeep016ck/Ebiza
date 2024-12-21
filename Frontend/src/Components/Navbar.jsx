@@ -20,7 +20,7 @@ const Navbar = () => {
     }, []);
 
   return (
-    <nav className='flex justify-evenly items-center p-4 transition-all duration-300 bg-[#00395a] text-white'>
+    <nav className='flex justify-evenly items-center p-4 transition-all duration-300  text-white sticky top-20 z-10'>
       
       {/* Navigation Links */}
       <div className="flex space-x-6 gap-4 ">
