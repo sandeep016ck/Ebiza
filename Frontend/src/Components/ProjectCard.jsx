@@ -27,7 +27,10 @@ function ProjectCard({ projectImg, ProfileImg, ProfileName, date, children }) {
       <div className="relative overflow-hidden transition-[max-height] duration-300 ease-in-out max-h-0 group-hover:max-h-40 px-2">
         <p className="text-md text-gray-700 mt-2">{children}</p>
       </div>
+      <p>sujit </p>
+      <p>sam</p>
     </div>
+
   );
 }
 
