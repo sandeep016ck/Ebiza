@@ -1,10 +1,10 @@
   
-import mongoose from 'mongoose';
+// import mongoose from 'mongoose';
 
-export const dbConnection = () => {
-    try {
+// export const dbConnection = () => {
+//     try {
+//         cosnt connect = mongoose.connect()
+//     } catch (error) {
         
-    } catch (error) {
-        
-    }
-} 
+//     }
+// } 

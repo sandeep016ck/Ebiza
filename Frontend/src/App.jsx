@@ -5,6 +5,8 @@ import Header from './Components/Header'
 import ProjectC from './Components/ProjectC'
 import MainSection from './Components/MainSection'
 import ProjectD from './Components/ProjectD'
+import Sign_up from './Components/Sign_up'
+import Sign_in from './Components/Sign_in'
 
 function App() {
    const [content,setContent] = useState('home')
@@ -27,6 +29,8 @@ function App() {
             fundTobeRaised='30,000'
             fundRaised='100,000'
           />
+
+          <Sign_in />
         
     </div>
   )
