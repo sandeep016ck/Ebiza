@@ -30,11 +30,11 @@ const userSchema =mongoose.Schema({
         type:String,
         required:true
     },
-    projects:{
-        type:Array,
-        required:true,
-        default:[]
-    } 
+    projects: [{
+        type: mongoose.Schema.Types.ObjectId,
+        ref: 'project',
+        default: []
+    }]
 })
 
 
