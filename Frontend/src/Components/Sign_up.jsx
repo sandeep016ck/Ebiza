@@ -1,3 +1,5 @@
+
+
 import React, { useState, useEffect } from "react";
 import ReCAPTCHA from "react-google-recaptcha";
 import {
@@ -6,10 +8,10 @@ import {
   validatePassword,
   validatePhone,
 } from "../utils/validation";
-import { generateOTP, validateOTP } from "../utils/otp"
+import { generateOTP, validateOTP } from "../utils/otp";
 import bcrypt from "bcryptjs"; // For password encryption
 
-const Sign_up = () => {
+const Sign_up = ({ onBack }) => {
   const [firstName, setFirstName] = useState("");
   const [middleName, setMiddleName] = useState("");
   const [lastName, setLastName] = useState("");
@@ -97,6 +99,7 @@ const Sign_up = () => {
 
     alert("Sign-up successful!");
     setError("");
+    onBack(); // Navigate back to home or previous page after successful signup
   };
 
   useEffect(() => {
@@ -110,7 +113,7 @@ const Sign_up = () => {
 
   return (
     <div className="max-w-md mx-auto p-6 border border-gray-300 rounded-lg bg-gray-50">
-      <h2 className="text-2xl font-bold text-center text-blue-800 mb-4">Sign Up</h2>
+      <h2 className="text-2xl font-bold text-center text-gray-800 mb-4">Sign Up</h2>
       {error && <p className="text-red-500 text-center mb-4">{error}</p>}
       <form onSubmit={handleSubmit} className="space-y-4">
         {/* Name Fields */}
@@ -173,7 +176,7 @@ const Sign_up = () => {
         <button
           type="button"
           onClick={handleGenerateOTP}
-          className="w-full bg-blue-800 text-white py-2 rounded hover:bg-blue-700"
+          className="w-full bg-blue-500 text-white py-2 rounded hover:bg-blue-600"
         >
           Generate OTP
         </button>
@@ -182,21 +185,28 @@ const Sign_up = () => {
           placeholder="Enter OTP"
           value={otp}
           onChange={(e) => setOtp(e.target.value)}
-          className="w-full p-2 border border-gray-300 rounded focus:outline-none focus:ring-2 focus:ring-blue-500"
+          className="w-full p-2 border border-gray-300 rounded focus:outline-none focus:ring-2 focus:ring-blue-700"
         />
         <button
           type="button"
           onClick={handleValidateOTP}
-          className="w-full bg-blue-800 text-white py-2 rounded hover:bg-blue-700"
+          className="w-full bg-blue-500 text-white py-2 rounded hover:bg-blue-600"
         >
           Validate OTP
         </button>
 
         <button
           type="submit"
-          className="w-full bg-blue-800 text-white py-2 rounded hover:bg-blue-700"
+          className="w-full bg-blue-500 text-white py-2 rounded hover:bg-blue-600"
         >
           Submit
+        </button>
+
+        <button
+          onClick={onBack}
+          className="mt-4 w-full bg-gray-500 text-white py-2 rounded-lg hover:bg-gray-600 focus:outline-none"
+        >
+          Back
         </button>
       </form>
     </div>

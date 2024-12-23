@@ -1,7 +1,9 @@
+
+
 import React, { useState } from "react";
 import ReCAPTCHA from "react-google-recaptcha";
 
-const Sign_in = () => {
+const Sign_in = ({ onBack }) => {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [mobile, setMobile] = useState("");
@@ -11,7 +13,6 @@ const Sign_in = () => {
   const [attempts, setAttempts] = useState(0);
   const [isBlocked, setIsBlocked] = useState(false);
   const [generatedOtp, setGeneratedOtp] = useState(null);
-  const [blockTime, setBlockTime] = useState(null);
 
   const handleCaptcha = (value) => {
     setCaptchaVerified(!!value);
@@ -19,11 +20,10 @@ const Sign_in = () => {
 
   const startBlockTimer = () => {
     setIsBlocked(true);
-    setBlockTime(Date.now());
     setTimeout(() => {
       setIsBlocked(false);
       setAttempts(0);
-    }, 10 * 60 * 1000);
+    }, 10 * 60 * 1000); // Block for 10 minutes
   };
 
   const sendOtp = () => {
@@ -81,6 +81,7 @@ const Sign_in = () => {
     alert("Sign-in successful!");
     setError("");
     setAttempts(0);
+    // Perform additional actions after successful sign-in
   };
 
   const incrementAttempts = () => {
@@ -90,19 +91,11 @@ const Sign_in = () => {
     if (newAttempts >= 3) {
       startBlockTimer();
       setError("Too many failed attempts. You are blocked for 10 minutes.");
-      sendSecurityAlert();
     }
   };
 
-  const sendSecurityAlert = () => {
-    alert(
-      `Security Alert: Your account has been temporarily blocked due to 3 failed sign-in attempts. Please try again in 10 minutes.`
-    );
-    console.log(`Security alert sent to ${email} and ${mobile}`);
-  };
-
   return (
-    <div className="flex justify-center items-center min-h-screen bg-gray-100">
+    <div className="flex justify-center items-center min-h-screen bg-black bg-opacity-50 text-white p-4">
       <form
         className="bg-white p-6 rounded-lg shadow-md w-full max-w-md"
         onSubmit={handleSignIn}
@@ -200,6 +193,14 @@ const Sign_in = () => {
           disabled={isBlocked}
         >
           Sign In
+        </button>
+
+        <button
+          type="button"
+          onClick={onBack}
+          className="mt-4 w-full bg-gray-500 text-white py-2 rounded-lg hover:bg-gray-600 focus:outline-none"
+        >
+          Back
         </button>
       </form>
     </div>
