@@ -1,5 +1,5 @@
 import bcrypt from 'bcrypt';
-import usermodel from '../models/userModel';
+import userModel from '../models/userModel.js';
 import jwt from 'jsonwebtoken';
 
 const createUser = async (req, res) => {
@@ -17,7 +17,7 @@ const createUser = async (req, res) => {
         const hashedPassword = await bcrypt.hash(password, saltRounds);
 
         // Create a new user
-        const user = await usermodel.create({
+        const user = await userModel.create({
             username,
             email,
             phone,
@@ -49,7 +49,7 @@ const loginUser = async (req, res) => {
     }
 
     try {
-        const validUser = await usermodel.findOne({ email });
+        const validUser = await userModel.findOne({ email });
         if (!validUser) {
             return res.status(404).json({ message: "User not found" });
         }
@@ -83,7 +83,7 @@ const loginUser = async (req, res) => {
     }
 };
 
-export default {
+export {
     createUser,
     loginUser,
 };
