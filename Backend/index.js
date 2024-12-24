@@ -5,9 +5,11 @@ import cors from 'cors'
 import {dbConnection} from "./Config/dbConnection.js";
 import userRoutes from "./Routes/userRoutes.js";
 const app = express();
+dotenv.config();
+
 const PORT = process.env.PORT
 
-dotenv.config();
+
 app.use(cors())
 app.use(express.json());
 
