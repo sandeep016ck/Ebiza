@@ -1,6 +1,6 @@
 // Backend routes for project management
 import express from 'express';
-import { getProject,createProject, getProjectById, deleteProject } from '../Controllers/projectController';
+import { getProject,createProject, getProjectById, deleteProject } from '../Controllers/projectController.js';
 
 const router = express.Router();
 
