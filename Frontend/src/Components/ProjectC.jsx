@@ -51,9 +51,6 @@ function ProjectC(){
                             World-renowned Imabari Towel making techniques and technology is used to create a new extra large super soft blanket!
                         </ProjectCard>
                         
-                       <div><p>chikuuuu</p>
-                       <h>he is a young guy</h></div>
-                       <div></div> 
                 </div>
         </div>
     )
