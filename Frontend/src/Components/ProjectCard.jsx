@@ -37,12 +37,6 @@ function ProjectCard({ projectImg, ProfileImg, ProfileName, date, children }) {
 
 
       </div>
-
-      {/* Description Section */}
-      {/* <div className=" w-full relative overflow-hidden  transition-[max-height] duration-300 ease-in-out max-h-0 group-hover:max-h-40  hover:bg-[#FFFFFF] relative">
-        <p className="text-md text-gray-700 mt-2  w-full">{children}</p>
-      </div> */}
-
     </div>
 
   );
