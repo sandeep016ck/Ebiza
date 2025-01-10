@@ -22,7 +22,6 @@ function ProjectD({ productHed, productDesc, productImg, fundTobeRaised, fundRai
                     </div>
 
                     <div className="w-[40vw]  p-9  flex flex-col justify-center items-start gap-6 text-xl font-bold">
-
                         <div className="flex flex-col  text-4xl">
                             <span> Rs.{fundRaised}</span>
                             <span className="text-sm text-slate-300">pledged of Rs.{fundTobeRaised} goal</span>
